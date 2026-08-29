@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 };
 
-const whatsappUrl = "https://wa.me/qr/EM37FXP6YZW5J1";
+const whatsappUrl = "https://wa.me/message/A4SBUNT4IUFKP1";
 
 export default function ThankYouPage() {
   return (
@@ -42,18 +42,14 @@ export default function ThankYouPage() {
             </h2>
           </div>
 
-          <div className="relative mt-8 flex aspect-video items-center justify-center overflow-hidden rounded-2xl bg-gradient-to-br from-ink via-[#163B73] to-primary p-6 text-center shadow-glow">
-            <div className="pointer-events-none absolute -left-16 top-0 h-48 w-48 rounded-full bg-blue-300/20 blur-3xl" />
-            <div className="pointer-events-none absolute -bottom-16 -right-12 h-56 w-56 rounded-full bg-indigo-300/20 blur-3xl" />
-            <div className="relative">
-              <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-full border border-white/25 bg-white/15 text-white shadow-lg" aria-hidden="true">
-                <svg viewBox="0 0 24 24" className="ml-0.5 h-6 w-6" fill="currentColor">
-                  <path d="M8 5.14v13.72a1 1 0 0 0 1.51.86l10.4-6.86a1 1 0 0 0 0-1.72L9.51 4.28A1 1 0 0 0 8 5.14Z" />
-                </svg>
-              </div>
-              <p className="mt-4 text-lg font-bold text-white sm:text-xl">Video embed placeholder</p>
-              <p className="mt-1 text-sm leading-6 text-blue-100">Add your consultation video here.</p>
-            </div>
+          <div className="relative mt-8 aspect-video overflow-hidden rounded-2xl bg-ink shadow-glow">
+            <iframe
+              className="absolute inset-0 h-full w-full"
+              src="https://www.youtube.com/embed/h48G5u-b1tI"
+              title="What Happens Next—and How to Get the Most From Your Free AI Marketing Consultation"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
           </div>
 
           <div className="mx-auto mt-10 max-w-2xl">
