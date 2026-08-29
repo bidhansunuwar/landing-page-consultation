@@ -107,9 +107,6 @@ export default function ThankYouPage() {
             </svg>
             Message Me on WhatsApp
           </a>
-          <p className="mx-auto mt-5 max-w-2xl text-sm leading-6 text-slate-300">
-            Suggested message: “Hi, I requested a free AI marketing consultation. My business name is [Business Name], and my biggest marketing challenge is [Challenge].”
-          </p>
         </section>
       </section>
     </main>
