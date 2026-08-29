@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export function Hero() {
   return (
-    <section className="relative isolate overflow-hidden px-5 pb-6 pt-8 sm:px-6 sm:py-16 lg:py-10">
+    <section className="relative isolate overflow-hidden px-5 pb-6 pt-6 sm:px-6 sm:pb-10 sm:pt-10 lg:pb-8 lg:pt-6">
       <div className="pointer-events-none absolute inset-0 -z-10 bg-[linear-gradient(180deg,#ffffff_0%,#f8fbff_62%,#f8fafc_100%)]" />
       <div className="hero-orb pointer-events-none absolute -left-24 top-8 -z-10 h-64 w-64 rounded-full bg-blue-100/70 blur-3xl sm:left-[6%] sm:h-80 sm:w-80" />
       <div className="pointer-events-none absolute right-[5%] top-16 -z-10 h-80 w-80 rounded-full bg-indigo-100/60 blur-3xl" />
