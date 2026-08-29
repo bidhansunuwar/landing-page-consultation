@@ -28,7 +28,7 @@ export function CTAForm() {
     const beginDelayedRedirect = () => {
       if (redirectStarted.current) return;
       redirectStarted.current = true;
-      window.setTimeout(() => window.location.assign("/thanks"), successDelayMs);
+      window.setTimeout(() => window.location.assign("/thank-you"), successDelayMs);
     };
 
     const observeSuccess = () => {
