@@ -27,7 +27,7 @@ export default function ThankYouPage() {
             </svg>
           </div>
           <h1 className="mx-auto max-w-2xl text-balance text-4xl font-black leading-[1.08] tracking-[-0.045em] text-ink sm:text-5xl">
-            Thank You — Your Free Consultation Request Is Received
+            Your Consultation Seat Is Reserved
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-pretty text-base leading-7 text-muted sm:text-lg sm:leading-8">
             You’ve taken the first step toward getting clearer on what may be holding back your enquiries.

@@ -13,7 +13,7 @@ export function Hero() {
             FREE AI MARKETING CONSULTATION
           </p>
           <h1 className="mt-4 max-w-3xl text-balance text-[clamp(1.95rem,8.4vw,3.75rem)] font-black leading-[1.02] tracking-[-0.055em] text-ink sm:text-[clamp(2.45rem,4.2vw,3.75rem)]">
-            Find the <span className="text-primary">3 Biggest Reasons</span> Your Business Isn’t Getting Enough Enquiries.
+            Why Aren’t You Getting <span className="text-primary">Enough Enquiries?</span>
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-pretty text-base font-medium leading-7 text-ink/85 sm:text-xl sm:leading-9 lg:mx-0">
             Get clear priorities to attract more qualified leads and improve your marketing.
