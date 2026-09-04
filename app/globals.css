@@ -132,8 +132,67 @@ h3 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Theme overrides apply to the supplied Flodesk form without changing its native markup or scripts. */
+.flodesk-host [data-ff-el="root"] [data-ff-el="form"] {
+  padding: 2rem;
+  color: #10213e;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.flodesk-host [data-ff-el="root"] .fd-form-group {
+  margin-bottom: 1rem;
+}
+
+.flodesk-host [data-ff-el="root"] .fd-form-control {
+  height: 3.4rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 0.75rem;
+  padding: 0.9rem 1rem;
+  color: #10213e;
+  font-size: 1rem;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
+.flodesk-host [data-ff-el="root"] .fd-form-control:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 4px #dbeafe;
+}
+
+.flodesk-host [data-ff-el="root"] .fd-form-label {
+  color: #10213e;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.flodesk-host [data-ff-el="root"] [data-ff-el="submit"] {
+  width: 100%;
+  min-height: 3.5rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.flodesk-host [data-ff-el="root"] [data-ff-el="submit"]:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.flodesk-host [data-ff-el="root"] [data-ff-el="success"] {
+  color: #10213e;
+  font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+}
+
 @media (max-width: 639px) {
   .flodesk-host [data-ff-el="root"].ff-6a8eafa91304dd47db1cc4be .ff-6a8eafa91304dd47db1cc4be__form {
+    padding: 1.35rem;
+  }
+
+  .flodesk-host [data-ff-el="root"] [data-ff-el="form"] {
     padding: 1.35rem;
   }
 }

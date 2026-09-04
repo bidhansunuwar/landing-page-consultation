@@ -2,16 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const flodeskFormId = "6a8eafa91304dd47db1cc4be";
+const flodeskFormId = "6a9a6e40f26015bf13b79a45";
 const successDelayMs = 1400;
-
-function encodeConfig(config: Record<string, unknown>) {
-  return window.btoa(unescape(encodeURIComponent(JSON.stringify(config))));
-}
-
-function decodeConfig(value: string) {
-  return JSON.parse(decodeURIComponent(escape(window.atob(value)))) as Record<string, unknown>;
-}
 
 export function CTAForm() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -28,7 +20,7 @@ export function CTAForm() {
     const beginDelayedRedirect = () => {
       if (redirectStarted.current) return;
       redirectStarted.current = true;
-      window.setTimeout(() => window.location.assign("/thank-you"), successDelayMs);
+      window.setTimeout(() => window.location.assign("/thanks"), successDelayMs);
     };
 
     const observeSuccess = () => {
@@ -57,21 +49,14 @@ export function CTAForm() {
         if (!isActive) return;
 
         const documentFragment = new DOMParser().parseFromString(html, "text/html");
-        const config = documentFragment.querySelector<HTMLElement>("[data-ff-el='config']");
-        if (!config?.dataset.ffConfig) throw new Error("Flodesk form configuration is missing.");
-
-        // This one necessary change shows Flodesk's native success state before redirecting locally.
-        const configData = decodeConfig(config.dataset.ffConfig);
-        configData.onSuccess = { mode: "show", message: "", redirectUrl: "" };
-        config.dataset.ffConfig = encodeConfig(configData);
-
         documentFragment.head.querySelectorAll("link, style").forEach((node) => document.head.appendChild(node.cloneNode(true)));
         const scripts = [...documentFragment.body.querySelectorAll("script")];
         scripts.forEach((script) => script.remove());
         mount.replaceChildren(...[...documentFragment.body.childNodes].map((node) => node.cloneNode(true)));
-        runEmbedScripts(scripts);
         observeSuccess();
         setStatus("ready");
+        // Keep Flodesk's supplied config and scripts unchanged so its native capture flow remains intact.
+        runEmbedScripts(scripts);
       } catch {
         if (isActive) setStatus("error");
       }
